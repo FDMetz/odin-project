@@ -1,2 +1,2 @@
 # odin-recipes
-TOP exercise,a very basic webpage that contains hyperlinks and images.
+Make a very basic web page using HTML, containing hyperlinks and images.
