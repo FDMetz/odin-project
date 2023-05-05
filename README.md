@@ -9,3 +9,7 @@ Here are all the projects I'm doing, as I progress through the odin project less
  -   **Flexbox-test**
     
 	 -  Make a web page using Flexbox layouts.
+ 
+ - **Landing page**
+    
+	 -  Recreate a complete web page from a design.
