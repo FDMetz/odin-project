@@ -1,4 +1,4 @@
-## Foundations Course - Projects
+## Projects
 
  -   **Odin-recipes**
     
