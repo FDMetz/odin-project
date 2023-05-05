@@ -1,6 +1,6 @@
 Here are all the projects I'm doing, as I progress through the odin project lessons.
 
-## Foundations Course
+## Foundations Course - Projects
 
  -   **Odin-recipes**
     
