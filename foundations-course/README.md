@@ -7,3 +7,7 @@
  -   **Flexbox-test**
     
 	 -  Make a web page using Flexbox layouts.
+
+- **Landing page**
+    
+	 -  Recreate a complete web page from a design.
