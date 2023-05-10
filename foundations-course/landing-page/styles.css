@@ -72,8 +72,9 @@ button {
 }
 
 .right {
-    flex: 3;
     height: 250px;
+    width: 500px;
+    flex-shrink: 0;
     display: flex;
     justify-content: center;
     align-items: center;
