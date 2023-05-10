@@ -128,6 +128,7 @@ button {
 .quote {
     font-size: 36px;
     font-style: italic;
+    min-width: 600px;
 }
 
 .sing {
