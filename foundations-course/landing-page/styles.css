@@ -100,6 +100,8 @@ button {
     text-align: center;
     gap: 64px;
     margin-bottom: 96px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .img-subtext {
