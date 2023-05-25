@@ -41,5 +41,19 @@ function game(){
         getPlayerChoice();
         playRound(playerChoice,getComputerChoice());
         rounds++;
+        playerChoice=null;
+    }
+
+    alert(`Score\nPlayer: ${ps}\tComputer: ${cs}`);
+    
+    if( ps==cs ){
+        alert("Tie");
+    }else { if (ps<cs){
+            alert("You lose");
+        }else {
+            alert("You win");
+        }
     }
 }
+
+game();
