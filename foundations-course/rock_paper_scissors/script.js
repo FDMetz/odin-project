@@ -7,10 +7,17 @@ function getComputerChoice(){
 
 function getPlayerChoice(){
     while ( playerChoice==null ){
-        playerChoice = prompt("Choice: rock, paper or scissors.");
-        if (playerChoice.toLowerCase()!=choice[0] && playerChoice.toLowerCase()!=choice[1] && playerChoice.toLowerCase()!=choice[0]){
+        playerChoice = prompt("Choice: rock, paper or scissors.").toLowerCase();
+        
+        if (playerChoice!=choice[0] && playerChoice!=choice[1] && playerChoice!=choice[2]){
             playerChoice=null;
             alert("invalid option");
         }
     }
 }
+
+/*function round(playerChoice,computerChoice){
+    if( playerChoice==computerChoice ){
+        alert("Tie!");
+    }else if ( playerChoice == choice[0] && computerChoice == choice[1])
+}*/
