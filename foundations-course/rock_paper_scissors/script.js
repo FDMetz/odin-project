@@ -1,5 +1,7 @@
 const choice = ["rock","paper","scissors"];
 let playerChoice = null;
+let ps = 0; //player score
+let cs = 0; //computer score
 
 function getComputerChoice(){
     return choice[Math.floor(Math.random()*3)];
@@ -24,9 +26,20 @@ function playRound(playerChoice,computerChoice){
             playerChoice == choice[2] && computerChoice == choice[0] || 
             playerChoice == choice[1] && computerChoice == choice[2]){
             alert(`You lose! ${computerChoice} beats ${playerChoice}`);
+            cs++;
         }else{
             alert(`You win! ${playerChoice} beats ${computerChoice}`);
+            ps++;
         }
     }
 }
 
+function game(){
+    let rounds = 0;
+
+    while(rounds<5){
+        getPlayerChoice();
+        playRound(playerChoice,getComputerChoice());
+        rounds++;
+    }
+}
