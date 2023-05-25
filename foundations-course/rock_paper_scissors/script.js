@@ -16,8 +16,19 @@ function getPlayerChoice(){
     }
 }
 
-/*function round(playerChoice,computerChoice){
+function round(playerChoice,computerChoice){
     if( playerChoice==computerChoice ){
         alert("Tie!");
-    }else if ( playerChoice == choice[0] && computerChoice == choice[1])
-}*/
+    }else {
+        if ( playerChoice == choice[0] && computerChoice == choice[1] || 
+            playerChoice == choice[2] && computerChoice == choice[0] || 
+            playerChoice == choice[1] && computerChoice == choice[2]){
+            alert(`You lose! ${computerChoice} beats ${playerChoice}`);
+        }else{
+            alert(`You win! ${playerChoice} beats ${computerChoice}`);
+        }
+    }
+}
+
+getPlayerChoice();
+round(playerChoice,getComputerChoice());
