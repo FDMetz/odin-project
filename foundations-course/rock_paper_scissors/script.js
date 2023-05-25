@@ -16,7 +16,7 @@ function getPlayerChoice(){
     }
 }
 
-function round(playerChoice,computerChoice){
+function playRound(playerChoice,computerChoice){
     if( playerChoice==computerChoice ){
         alert("Tie!");
     }else {
@@ -30,5 +30,3 @@ function round(playerChoice,computerChoice){
     }
 }
 
-getPlayerChoice();
-round(playerChoice,getComputerChoice());
