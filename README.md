@@ -13,3 +13,7 @@ Here are all the projects I'm doing, as I progress through the odin project less
  - **Landing page**
     
 	 -  Recreate a complete web page from a design.
+	  
+ -   **Rock-paper-scissors**
+    
+	 -  A simple implementation of "Rock paper scissors" game.
