@@ -1,70 +1,60 @@
-const choice = ["rock","paper","scissors"];
-let playerChoice = null;
+const choice = ["rock","papper","scissors"];
 let ps = 0; //player score
 let cs = 0; //computer score
-const rock = document.querySelector("#rock");
-const papper = document.querySelector("#papper");
-const scissors = document.querySelector("#scissors");
 let playSco = document.querySelector("#playSco");
+let compSco = document.querySelector("#compSco");
+const result = document.querySelector ("#result");
+const resetButton = document.createElement ("button");
+const body = document.querySelector ("body");
 
 function getComputerChoice(){
     return choice[Math.floor(Math.random()*3)];
 }
 
-function getPlayerChoice(){
-    while ( playerChoice==null ){
-        playerChoice = prompt("Choice: rock, paper or scissors.").toLowerCase();
-        
-        if (playerChoice!=choice[0] && playerChoice!=choice[1] && playerChoice!=choice[2]){
-            playerChoice=null;
-            alert("invalid option");
-        }
-    }
-}
-
 function playRound(playerChoice,computerChoice){
     if( playerChoice==computerChoice ){
-        alert("Tie!");
+        result.textContent = `${playerChoice} and ${computerChoice}, tie!`;
     }else {
         if ( playerChoice == choice[0] && computerChoice == choice[1] || 
             playerChoice == choice[2] && computerChoice == choice[0] || 
-            playerChoice == choice[1] && computerChoice == choice[2]){
-            alert(`You lose! ${computerChoice} beats ${playerChoice}`);
-            cs++;
+            playerChoice == choice[1] && computerChoice == choice[2])
+            {
+            compSco.textContent = ++cs;
+            result.textContent = `${playerChoice} lose to ${computerChoice}`;
         }else{
-            alert(`You win! ${playerChoice} beats ${computerChoice}`);
-            ps++;
-        }
+            playSco.textContent = ++ps;
+            result.textContent = `${playerChoice} beats ${computerChoice}`;
+        }  
     }
 }
 
-/*function game(){
-    let rounds = 0;
-
-    while(rounds<5){
-        getPlayerChoice();
-        playRound(playerChoice,getComputerChoice());
-        rounds++;
-        playerChoice=null;
-    }
-
-    alert(`Score\nPlayer: ${ps}\tComputer: ${cs}`);
-    
-    if( ps==cs ){
-        alert("Tie");
-    }else { if (ps<cs){
-            alert("You lose");
-        }else {
-            alert("You win");
-        }
-    }
-}*/
+function endGame(playerScore,computerScore){
+    if( playerScore>computerScore )
+        result.textContent = "¡You Win!";
+    else
+        result.textContent = "¡You Lose!";
+}
 
 function pressButton(e){
-    playRound(e.target.id,getComputerChoice());
-    console.log(ps);
+    if( e.target.className=="option" && ps<5 && cs<5 )
+            playRound(e.target.id,getComputerChoice());
+    if( ps==5 || cs==5 ){
+        endGame(ps,cs);
+
+        resetButton.textContent = "Play again";
+        resetButton.style.marginTop = "30px";
+        body.appendChild(resetButton);
+        resetButton.addEventListener("click",playAgain);
+    }
 }
 
-rock.addEventListener("click",pressButton);
-papper.addEventListener("click",pressButton);
-scissors.addEventListener("click",pressButton);
+function playAgain(){
+    compSco.textContent=0;
+    playSco.textContent=0;
+    ps=0;
+    cs=0;
+    result.textContent="";
+    body.removeChild(resetButton);
+}
+
+window.addEventListener("click",pressButton);

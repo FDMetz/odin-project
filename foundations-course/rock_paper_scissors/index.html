@@ -3,18 +3,25 @@
     <head>
         <meta charset="UTF-8">
         <title>Rock Paper Scissors</title>
+        <script src="./script.js" defer></script>
+        <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-        <button id="rock">Rock</button>
-        <button id="papper">Papper</button>
-        <button id="scissors">Scissors</button>
-        <h1>Score</h1>
-        <div id="screen">
-            <p>player</p>
-            <p id="playSco">0</p>
-            <p>Computer</p>
-            <p id="compSco">0</p>
+        <div id="buttons">
+            <button id="rock" class="option">Rock</button>
+            <button id="papper" class="option">Papper</button>
+            <button id="scissors" class="option">Scissors</button>
         </div>
-        <script src="./script.js"></script>
+        <h2 id="result">-------</h2>
+        <div id="screen">
+            <div id="playerOne">
+                <p>You</p>
+                <p id="playSco">0</p>
+            </div>
+            <div id="playerTwo">
+                <p>Computer</p>
+                <p id="compSco">0</p>
+            </div>
+        </div>
     </body>
 </html>
