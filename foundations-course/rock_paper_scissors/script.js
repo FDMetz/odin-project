@@ -5,6 +5,7 @@ let cs = 0; //computer score
 const rock = document.querySelector("#rock");
 const papper = document.querySelector("#papper");
 const scissors = document.querySelector("#scissors");
+let playSco = document.querySelector("#playSco");
 
 function getComputerChoice(){
     return choice[Math.floor(Math.random()*3)];
@@ -61,6 +62,7 @@ function playRound(playerChoice,computerChoice){
 
 function pressButton(e){
     playRound(e.target.id,getComputerChoice());
+    console.log(ps);
 }
 
 rock.addEventListener("click",pressButton);
