@@ -33,7 +33,16 @@ function appendColumns (rowNum,colmNum){
     }
 }
 
+function changeBackground(e){
+    if(e.target.className == "column"){
+        e.target.setAttribute("class","hover");
+    }
+        
+}
+
 createRows(16);
 appendRows(16);
 createColumns(16,16);
 appendColumns(16,16);
+
+document.addEventListener("mouseover",changeBackground);
