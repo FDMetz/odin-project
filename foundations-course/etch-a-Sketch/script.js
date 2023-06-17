@@ -1,9 +1,9 @@
 const gridContainer = document.querySelector(".grid-container");
-let size = 4;
+let side = 4;
 const button = document.querySelector("button");
 
 function createGrid (cellNum){
-    for(let i=0; i<size*size; i++){
+    for(let i=0; i<side; i++){
         const cell = document.createElement("div");
         cell.className = "cell";
         cell.textContent = i;
@@ -21,5 +21,5 @@ function changeClass(e){
     }     
 }
 
-createGrid(size);
+createGrid(side);
 document.addEventListener("mouseover",changeClass);
