@@ -14,9 +14,14 @@ body{
     
 }
 
-.cell{
+.row{
+    display: flex;
     flex: 1;
-    outline: 1px solid black;
+}
+
+.column{
+    flex: 1;
+    border: 1px solid black;
 }
 
 .hover{
