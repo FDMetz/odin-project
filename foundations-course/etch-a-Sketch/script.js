@@ -1,9 +1,9 @@
 const gridContainer = document.querySelector(".grid-container");
-let size = 16;
+let size = 4;
 const button = document.querySelector("button");
 
 function createGrid (cellNum){
-    for(let i=0; i<size; i++){
+    for(let i=0; i<size*size; i++){
         const cell = document.createElement("div");
         cell.className = "cell";
         cell.textContent = i;

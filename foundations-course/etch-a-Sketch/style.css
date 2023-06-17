@@ -11,12 +11,12 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-content: center;
-    flex-direction: column;
+    
 }
 
 .cell{
-    border: 1px solid black;
+    flex: 1;
+    outline: 1px solid black;
 }
 
 .hover{
