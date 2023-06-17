@@ -7,19 +7,19 @@ function createGrid (side){
         const row = document.createAttribute("div");
 
         row.className = "row";
-        appendCell(row);
+        appendCell(row,gridContainer);
         for(let c=0; c<side; i++){
             const cell = document.createElement("div");
             
             cell.className = "cell";
             cell.textContent = r+c;
-            appendCell(row);
+            appendCell(cell,row);
         }
     }
 }
 
-function appendCell(child){
-    gridContainer.appendChild(child);
+function append(child,parent){
+    parent.appendChild(child);
 }
 
 function changeClass(e){
