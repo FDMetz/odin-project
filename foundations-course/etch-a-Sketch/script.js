@@ -2,12 +2,19 @@ const gridContainer = document.querySelector(".grid-container");
 let side = 4;
 const button = document.querySelector("button");
 
-function createGrid (cellNum){
-    for(let i=0; i<side; i++){
-        const cell = document.createElement("div");
-        cell.className = "cell";
-        cell.textContent = i;
-        appendCell(cell);
+function createGrid (side){
+    for(let r=0; r<side; i++){
+        const row = document.createAttribute("div");
+
+        row.className = "row";
+        appendCell(row);
+        for(let c=0; c<side; i++){
+            const cell = document.createElement("div");
+            
+            cell.className = "cell";
+            cell.textContent = r+c;
+            appendCell(row);
+        }
     }
 }
 
