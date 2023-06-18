@@ -4,17 +4,22 @@ html{
 
 body{
     display: flex;
-    justify-content: center;
     align-items: center;
     height: 100%;
     margin: 0px;
+}
+
+#buttons-container{
+    flex: 0.25;
+    display: flex;
+    justify-content: center;
 }
 
 .grid-container{
     border: 1px solid black;
     aspect-ratio: 1/1;
     display: flex;
-    flex: 1;
+    flex: 0.75;
     max-width: 900px;
     flex-direction: column;
 }
