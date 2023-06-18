@@ -1,10 +1,12 @@
-html,body,.grid-container{
+html{
     margin: 0px;
     height: 100%;
 }
 
 body{
-    text-align: center;
+    display: flex;
+    /*text-align: center;*/
+    flex-direction: column;
 }
 
 .grid-container{

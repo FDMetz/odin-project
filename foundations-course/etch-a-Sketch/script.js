@@ -1,5 +1,5 @@
 const gridContainer = document.querySelector(".grid-container");
-let side = 4;
+let side = 16;
 const button = document.querySelector("button");
 
 function createGrid (side){
@@ -12,7 +12,6 @@ function createGrid (side){
             const cell = document.createElement("div");
             
             cell.className = "column";
-            cell.textContent = c+r;
             append(cell,row);
         }
     }
@@ -22,4 +21,4 @@ function append(child,parent){
     parent.appendChild(child);
 }
 
-createGrid(side);
+//createGrid(side);
