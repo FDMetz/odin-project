@@ -12,6 +12,19 @@ body{
 
 .grid-container{
     border: 1px solid black;
-    height: 900px;
     aspect-ratio: 1/1;
+    display: flex;
+    flex: 1;
+    max-width: 900px;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+    flex: 1;
+}
+
+.column{
+    border: 1px solid black;
+    flex: 1;
 }
