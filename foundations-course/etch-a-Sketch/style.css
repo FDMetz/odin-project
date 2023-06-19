@@ -7,12 +7,27 @@ body{
     align-items: center;
     height: 100%;
     margin: 0px;
+    background-color: red;
 }
 
-#buttons-container{
+#controls{
     flex: 0.25;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h1{
+    color: gold;
+    text-shadow: 1px 1px black;
+}
+
+button{
+    background-color: white;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
 }
 
 .grid-container{
@@ -22,6 +37,7 @@ body{
     flex: 0.75;
     max-width: 900px;
     flex-direction: column;
+    background-color: rgb(186, 184, 184);
 }
 
 .row{
@@ -30,7 +46,6 @@ body{
 }
 
 .column{
-    border: 1px solid black;
     flex: 1;
 }
 
