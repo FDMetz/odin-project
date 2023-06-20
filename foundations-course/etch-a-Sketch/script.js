@@ -1,6 +1,7 @@
 const gridContainer = document.querySelector(".grid-container");
 let side = 16;
 const resizeButton = document.querySelector("#rButton");
+const cleanButton = document.querySelector("#cButton");
 
 function createElement(elementName,className){
     const newElemnt = document.createElement(elementName);
@@ -48,7 +49,15 @@ function removeGrid(){
     }
 }
 
+function clean(){
+    for( let i=0; i<side*side; i++){
+        if(columns.item(i).className === "column hover")
+            columns.item(i).classList.toggle("hover");
+    }
+}
+
 createGrid(side);
 resizeButton.addEventListener("click",resize);
 let columns = document.querySelectorAll(".column");
 columns.forEach(addEvent);
+cleanButton.addEventListener("click",clean);
