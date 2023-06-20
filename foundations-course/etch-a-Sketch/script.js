@@ -1,6 +1,6 @@
 const gridContainer = document.querySelector(".grid-container");
 let side = 16;
-const button = document.querySelector("button");
+const resizeButton = document.querySelector("#rButton");
 
 function createElement(elementName,className){
     const newElemnt = document.createElement(elementName);
@@ -49,6 +49,6 @@ function removeGrid(){
 }
 
 createGrid(side);
-button.addEventListener("click",resize);
+resizeButton.addEventListener("click",resize);
 let columns = document.querySelectorAll(".column");
 columns.forEach(addEvent);
