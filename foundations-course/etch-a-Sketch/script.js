@@ -51,7 +51,6 @@ function removeGrid(){
 
 function clean(){
     for( let i=0; i<side*side; i++){
-        //if(columns.item(i).className === "column hover")
             columns.item(i).classList.remove("hover");
     }
 }
