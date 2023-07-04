@@ -17,5 +17,26 @@ function divide(dividend,divisor){
 }
 
 let termOne;
-let operator;
+let operation;
 let termTwo;
+
+function operate(numbOne,op,numbTwo){
+    let result;
+    switch(op){
+        case "+": 
+            result = add(numbOne,numbTwo);
+            break;
+        case "-": 
+            result = subtract(numbOne,numbTwo);
+            break;
+        case "*": 
+            result = multiply(numbOne,numbTwo);
+            break;
+        case "/": 
+            result = divide(numbOne,numbTwo);
+            break;
+        default: 
+            break;
+    }
+    return result;
+}
