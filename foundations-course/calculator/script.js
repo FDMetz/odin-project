@@ -43,8 +43,8 @@ function operate(numbOne,op,numbTwo){
 
 let input = [];
 
-let buttons = document.querySelectorAll("#visible");
-buttons.forEach((button)=>button.addEventListener("click",getCharacter));
+let visibleChars = document.querySelectorAll("#visible");
+visibleChars.forEach((button)=>button.addEventListener("click",getCharacter));
 
 function getCharacter(button){
     input.push(button.target.innerText);
