@@ -40,3 +40,12 @@ function operate(numbOne,op,numbTwo){
     }
     return result;
 }
+
+let input = [];
+
+let buttons = document.querySelectorAll("#visible");
+buttons.forEach((button)=>button.addEventListener("click",getCharacter));
+
+function getCharacter(button){
+    input.push(button.target.innerText);
+};
